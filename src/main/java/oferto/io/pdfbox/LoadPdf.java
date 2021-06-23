@@ -26,8 +26,11 @@ public class LoadPdf {
 	        	COSString taxCode = (COSString)field.getCOSObject().getItem("TAX_CODE");      
 	        	COSString viewCode = (COSString)field.getCOSObject().getItem("VIEW_CODE");
 	        					
-				System.out.println("TAX_CODE: " + taxCode.getString());
-				System.out.println("VIEW_CODE: " + viewCode.getString());
+	        	if (taxCode != null)
+	        		System.out.println("TAX_CODE: " + taxCode.getString());
+	        	
+	        	if (viewCode != null)
+	        		System.out.println("VIEW_CODE: " + viewCode.getString());
 	        }
 	      
 			//Closing the document  
